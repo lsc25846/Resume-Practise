@@ -1,0 +1,136 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+body, ul, li, h1, h2, a{
+    margin:0;
+    padding:0;
+    font-family: 'Noto Sans TC';
+}
+
+header{           
+    padding: 5px;   
+    background-color: #F4F4F4;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left:0;    
+}
+
+header h1{    
+    padding: 0px 12px;    
+}
+nav{
+    background-color: #F4F4F4;
+    padding: 10px;   
+    position: sticky;
+    top:83px;
+}
+nav ul{
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around; /* 使元素在容器内均勻分布 */
+    padding: 0; /* 移除ul的默認padding */
+    list-style: none; /* 移除默認列表樣式 */
+
+}
+nav ul li{
+    
+    display: inline-block;
+    
+}
+section{
+    max-width: 100%;
+    width: 1200px;
+    margin: 50px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.about{    
+    padding-top: 110px;
+    
+}
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+}
+
+ul{
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+li{
+    margin-left: 10px;
+}
+
+p{
+    margin: 5px 0;
+    
+}
+.timeLine{
+    font-size: 10pt;
+}
+
+.hidden-content{
+    display: none;
+}
+
+.btn {
+    position: relative;
+    min-width: 160px;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+.btn span {
+    color: #FFFFFF;
+    mix-blend-mode: difference;
+}
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 52px;
+    height: 100%;
+    border-radius: 50px;
+    background: black;
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.btn:hover:before {
+  background: black;
+  width: 100%;
+}
+
+/* responsive styles */
+
+@media screen and (max-width: 560px){
+    header{
+        position: relative;
+    }
+    nav{
+        top: 0;
+    }
+    nav ul{
+        display: block; /* 將ul設置為塊級顯示 */
+        max-width: none; /* 移除最大寬度限制 */
+        white-space: normal; /* 允許內容換行 */
+    }
+    nav ul li{
+        display: block;
+        width: auto;
+    }
+    .about{
+        padding-top: 0;
+    }
+}
